@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Neopia is alive</title>
+    <title>Neopia is alive 2</title>
+
+    <!-- https://dealights.github.io/neopia-is-not-dead2/ -->
 
     <!-- scripts -->
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
@@ -155,6 +157,13 @@
         <!-- audios -->
         <audio id="tunnel" src="assets/audio/timetunnel.mp3"></audio>
         <audio id="kreludan" src="assets/audio/kreludan_mining_corp.mp3"></audio>
+
+        <!-- objetos nuevos -->
+        <a-asset-item id="tengosuerte" src="assets/images/backgrounds/cielo_estrellado.jpg"></a-asset-item>
+        <img id="cieloestrellado" src="assets/images/backgrounds/cielo_estrellado.jpg">
+        <a-asset-item id="gato" src="assets/3D/withBins/archive/cat.gltf"></a-asset-item>
+        <a-asset-item id="gato2" src="assets/3D/withBins/archive2/12221_Cat_v1_l3.gltf"></a-asset-item>
+        
         
 
     </a-assets>
@@ -185,7 +194,7 @@
         </a-entity>
 
         <!-- cielo y piso -->
-        <a-sky src="#espacio-3"></a-sky>
+        <a-sky src="#cieloestrellado"></a-sky>
         <a-entity geometry="primitive: circle" scale="20 20 20" rotation="-90 0 0" material="side: double; blending: additive; color: #091553; width: 20; transparent: true; metalness: 1; metalnessMap: #bricks; metalnessTextureOffset: 20 20; metalnessTextureRepeat: 20 20; repeat: 2 2; normalMap: #neopia-texture"></a-entity>
         
         <!-- 3d obj -->
@@ -328,11 +337,11 @@
 
         <!-- lol images -->
 
-    <a-image id="#neocola"></a-image>
-       <a-image id="#we-are-back"></a-image>
-       <a-image id="#uni-pals"></a-image>
-       <a-image id="#theme-park"></a-image>
-       <a-image id="#dead-chia"></a-image>
+    <a-image id="#neocola" position="10 2 2" rotation="0 90 0"></a-image>
+       <a-image id="#we-are-back" position="-4 5 6" rotation="0 90 0"></a-image>
+       <a-image id="#uni-pals" position="-6 4 5" rotation="0 90 0"></a-image>
+       <a-image id="#theme-park" position="-12 2 8" rotation="0 90 0"></a-image>
+       <a-image id="#dead-chia" position="-5 10 3" rotation="0 90 0"></a-image>
 
         <!-- random el static body no me funciono -->
         <a-image src="assets/images/lol/cola_machine.png" position="-5.86853 1.50606 4.13489" rotation="0 150 0" material="" geometry="" scale="3 3 3"></a-image>
@@ -356,6 +365,26 @@
         <a-box src="#neopia-world" position ="0 2 2" ></a-box>
         </a-entity>
    -->
+
+   <a-entity gltf-model="#gato" scale="0.082 0.082 0.082" animation="property:position;
+        from: 0 0 0;
+        to:0 0 -2;
+        dur:200;
+        startEvents: click;
+        loop:true;
+        dir:alternate;
+        easing: easeInCirc "   ></a-entity>
+
+
+        <a-entity gltf-model="#gato2" position=" 5 0 0" scale="0.061 0.0607 0.05872"
+            rotation="-86.6633042603078 152.14034813006313 168.4169331741396" position=" 1 0 1 " animation="property:position;
+        from: 5.000 0 0.4;
+            to:5 0 -2 ;
+        dur:200;
+        loop:true;
+        startEvents: click;
+        dir:alternate;
+        easing: easeInCirc"></a-entity>
    
     
 </body>
