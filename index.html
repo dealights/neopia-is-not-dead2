@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neopia is alive</title>
+
+    <!-- scripts -->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://unpkg.com/aframe-physics-extras@0.1.2/dist/aframe-physics-extras.min.js"></script>   
+
+    <!-- assets -->
+    <a-assets>
+
+        <!-- backgrounds and textures -->
+        <img id="espacio-3" src="assets/images/backgrounds/espacio-3.jpg">
+        <img id="neopia-texture" src="assets/images/neopia/neopia.png">
+        <img id="neopia-world" src="assets/images/neopia/Revolving_neopia.gif">
+        <img id="starry" src="assets/images/backgrounds/bg.jpg">
+        <img id="bricks" src="assets/images/textures/bricks.jpg">
+        <img id="level" src="assets/images/backgrounds/level_03_bg.jpg">
+        <img id="disco" src="assets/images/backgrounds/lg_disco.gif">
+        <img id="peo-bg" src="assets/images/backgrounds/peo.jpg">
+        <img id="petpet-bg" src="assets/images/backgrounds/petpet7.gif">
+        <img id="water-bg" src="assets/images/backgrounds/tex_tra_water.jpg">
+        <img id="zafara-bg" src="assets/images/backgrounds/zafara_bg.gif">
+
+        <!-- hadas -->
+        <img id="hada-1" src="assets/images/hadas/1.png">
+        <img id="hada-2" src="assets/images/hadas/2.png">
+        <img id="hada-3" src="assets/images/hadas/3.png">
+        <img id="hada-4" src="assets/images/hadas/4.png">
+        <img id="hada-5" src="assets/images/hadas/5.png">
+        <img id="hada-10" src="assets/images/hadas/10.png">
+        <img id="hada-11" src="assets/images/hadas/11.png">
+        <img id="hada-12" src="assets/images/hadas/12.png">
+        <img id="hada-13" src="assets/images/hadas/13.png">
+        <img id="hada-14" src="assets/images/hadas/14.png">
+        <img id="hada-15" src="assets/images/hadas/15.png">
+        <img id="hada-16" src="assets/images/hadas/16.png">
+        <img id="hada-17" src="assets/images/hadas/17.png">
+        <img id="hada-18" src="assets/images/hadas/18.png">
+        <img id="hada-19" src="assets/images/hadas/19.png">
+
+        <!-- layout -->
+        <img id="layout-1" src="assets/images/layout/butt_code.png">
+        <img id="layout-2" src="assets/images/layout/butt_faeriequest.png">
+        <img id="layout-3" src="assets/images/layout/contrib_pictures_button.png">
+        <img id="layout-4" src="assets/images/layout/contrib_poems_button.png">
+        <img id="layout-5" src="assets/images/layout/contrib_stories_button.png">
+        <img id="layout-6" src="assets/images/layout/globex.png">
+        <img id="layout-7" src="assets/images/layout/header_neomail.png">
+        <img id="layout-8" src="assets/images/layout/neodrive.png">
+        <img id="layout-9" src="assets/images/layout/neopoints.png">
+        <img id="layout-10" src="assets/images/layout/pics_back.png">
+        <img id="layout-11" src="assets/images/layout/pics_next.png">
+        <img id="layout-12" src="assets/images/layout/scroll_banner_1.png">
+        <img id="layout-13" src="assets/images/layout/scroll_banner_2.png">
+        <img id="layout-14" src="assets/images/layout/shh.png">
+        <img id="layout-15" src="assets/images/layout/shoptoolbar2.png">
+        <img id="layout-16" src="assets/images/layout/signup_bar2.png">
+        <img id="layout-17" src="assets/images/layout/win_random.png">
+
+        <!-- neocam -->
+        <img id="neocam-1" src="assets/images/neocam/3.jpg">
+        <img id="neocam-2" src="assets/images/neocam/4.jpg">
+        <img id="neocam-3" src="assets/images/neocam/6.jpg">
+        <img id="neocam-4" src="assets/images/neocam/12.jpg">
+        <img id="neocam-5" src="assets/images/neocam/13.jpg">
+        <img id="neocam-6" src="assets/images/neocam/20.jpg">
+        <img id="neocam-7" src="assets/images/neocam/40.jpg">
+        <img id="neocam-8" src="assets/images/neocam/42.jpg">
+        <img id="neocam-9" src="assets/images/neocam/44.jpg">
+        <img id="neocam-10" src="assets/images/neocam/57.jpg">
+        <img id="neocam-11" src="assets/images/neocam/62.jpg">
+        <img id="neocam-12" src="assets/images/neocam/63.jpg">
+        <img id="neocam-13" src="assets/images/neocam/64.jpg">
+        <img id="neocam-14" src="assets/images/neocam/73.jpg">
+        <img id="neocam-15" src="assets/images/neocam/cool1.jpg">
+        <img id="neocam-16" src="assets/images/neocam/cool3.jpg">
+        <img id="neocam-17" src="assets/images/neocam/cool4.jpg">
+        <img id="neocam-18" src="assets/images/neocam/cool5.jpg">
+        <img id="neocam-19" src="assets/images/neocam/cool7.jpg">
+        <img id="neocam-20" src="assets/images/neocam/cool8.jpg">
+        <img id="neocam-21" src="assets/images/neocam/cool9.jpg">
+        <img id="neocam-22" src="assets/images/neocam/neocam-shots_shot3.jpg">
+        <img id="neocam-23" src="assets/images/neocam/neocam-shots_shot11.jpg">
+        <img id="neocam-24" src="assets/images/neocam/neocam-shots_shot21.jpg">
+        <img id="neocam-25" src="assets/images/neocam/neocam-shots_shot22.jpg">
+        <img id="neocam-26" src="assets/images/neocam/neocam-shots_shot30.jpg">
+        <img id="neocam-27" src="assets/images/neocam/neocam-shots_shot44.jpg">
+        <img id="neocam-28" src="assets/images/neocam/neocam-shots_shot52.jpg">
+        <img id="neocam-29" src="assets/images/neocam/neocam-shots_shot53.jpg">
+        <img id="neocam-30" src="assets/images/neocam/neocam-shots_shot54.jpg">
+        <img id="neocam-31" src="assets/images/neocam/neopetsbdaygroup.jpg">
+        <img id="neocam-32" src="assets/images/neocam/teamneopia.png">
+
+       <!-- lol --> 
+       <img id="dead-chia" src="assets/images/lol/dead_chia.jpg">
+       <img id="we-are-back" src="assets/images/lol/wereback.gif">
+       <img id="uni-pals" src="assets/images/lol/UniPals1.gif">
+       <img id="theme-park" src="assets/images/lol/themeparkpic.gif">
+       <img id="neocola" src="assets/images/lol/Neocola_billboard.gif">
+
+        <!-- divisores y figuras -->
+        <img id="bubbles" src="assets/images/backgrounds/bubbles.gif">
+        
+        <!-- objetos 3d -->
+        <a-asset-item id="amapola" src="assets/3D/Gltf/maki_2.gltf"></a-asset-item>
+        <a-asset-item id="neopets-obj" src="assets/3D/neopets.obj"></a-asset-item>
+        <a-asset-item id="arbol" src="assets/3D/Gltf/arbol.gltf"></a-asset-item>
+        <a-asset-item id="arcoiris" src="assets/3D/Gltf/arcoiris.gltf"></a-asset-item>
+        <a-asset-item id="cubo" src="assets/3D/Gltf/cubo.gltf"></a-asset-item>
+        <a-asset-item id="goldbag" src="assets/3D/Gltf/goldbag.gltf"></a-asset-item>
+        <a-asset-item id="heartkey" src="assets/3D/Gltf/heartkey.gltf"></a-asset-item>
+        <a-asset-item id="huevito" src="assets/3D/Gltf/huevito.gltf"></a-asset-item>
+        <a-asset-item id="palma" src="assets/3D/Gltf/palma.gltf"></a-asset-item>
+        <a-asset-item id="tumba" src="assets/3D/Gltf/tumba.gltf"></a-asset-item>
+        <a-asset-item id="duelodromo" src="assets/3D/Gltf/dueldromo.gltf"></a-asset-item>
+        <a-asset-item id="fuente" src="assets/3D/Gltf/fuente.gltf"></a-asset-item>
+        <a-asset-item id="joshua" src="assets/3D/Gltf/joshua.gltf"></a-asset-item>
+        <a-asset-item id="mija" src="assets/3D/Gltf/mija.gltf"></a-asset-item>
+        <a-asset-item id="hierba" src="assets/3D/Gltf/ramita_1.gltf"></a-asset-item>
+        <a-asset-item id="neon" src="assets/3D/Gltf/serendipia.gltf"></a-asset-item>
+        <a-asset-item id="sombrerito" src="assets/3D/Gltf/sombrerito.gltf"></a-asset-item>
+        <a-asset-item id="vela-1" src="assets/3D/Gltf/velas_1.gltf"></a-asset-item>
+        <a-asset-item id="vela-2" src="assets/3D/Gltf/velas_2.gltf"></a-asset-item>
+        <a-asset-item id="vela-3" src="assets/3D/Gltf/velas_3.gltf"></a-asset-item>
+        <a-asset-item id="vela-4" src="assets/3D/Gltf/velas_4.gltf"></a-asset-item>
+        <a-asset-item id="vela-5" src="assets/3D/Gltf/velas_5.gltf"></a-asset-item>
+        <a-asset-item id="vela-6" src="assets/3D/Gltf/velas_6.gltf"></a-asset-item>
+        <a-asset-item id="velas" src="assets/3D/Gltf/velas_completas.gltf"></a-asset-item>
+
+        <!-- videos -->
+        <video id="promo-1" autoplay loop="true" src="assets/video/homepage.mp4"></video>
+        <video id="promo-2" autoplay loop="true" src="assets/video/aisha.mp4"></video>
+        <video id="promo-3" autoplay loop="true" src="assets/video/cheat.mp4"></video>
+        <video id="promo-4" autoplay loop="true" src="assets/video/garage_sale.mp4"></video>
+        <video id="promo-5" autoplay loop="true" src="assets/video/jhudorasquest.mp4"></video>
+        <video id="promo-6" autoplay loop="true" src="assets/video/neogreeting.mp4"></video>
+        <video id="promo-7" autoplay loop="true" src="assets/video/neopian_pound.mp4"></video>
+        <video id="promo-8" autoplay loop="true" src="assets/video/news_optins.mp4"></video>
+        <video id="promo-9" autoplay loop="true" src="assets/video/np_times_ja1.mp4"></video>
+        <video id="promo-10" autoplay loop="true" src="assets/video/omelette.mp4"></video>
+        <video id="promo-11" autoplay loop="true" src="assets/video/poogle_solitaire.mp4"></video>
+        <video id="promo-12" autoplay loop="true" src="assets/video/pterattack.mp4"></video>
+        <video id="promo-13" autoplay loop="true" src="assets/video/signup_ja.mp4"></video>
+        <video id="promo-14" autoplay loop="true" src="assets/video/smallishgorm.mp4"></video>
+        <video id="promo-15" autoplay loop="true" src="assets/video/tyrannia.mp4"></video>
+        <video id="promo-16" autoplay loop="true" src="assets/video/zurroball.mp4"></video>
+
+        <!-- audios -->
+        <audio id="tunnel" src="assets/audio/timetunnel.mp3"></audio>
+        <audio id="kreludan" src="assets/audio/kreludan_mining_corp.mp3"></audio>
+        
+
+    </a-assets>
+
+</head>
+<body>
+
+    <!-- (x,y,z) = (rojo, verde, azul) = (r,g,b) = (horizontal,altura,profundidad) y luego static-body o dynamic -->
+
+    <a-scene physics="gravity:0; debug: true">
+
+        <a-entity movement-controls kinematic-body>
+
+        <a-entity id="camera" camera position="0 1.6 -3.5" look-controls>
+
+            <a-entity
+                cursor="fuse:true; fuseTimeout: 500"
+                position="0 0 0"
+                geometry="primitive:ring; radiusInner: 0.02;"
+                material="color: black; shader:">
+
+            </a-entity>
+
+            </a-entity>
+
+        </a-entity>
+
+        </a-entity>
+
+        <!-- cielo y piso -->
+        <a-sky src="#espacio-3"></a-sky>
+        <a-entity geometry="primitive: circle" scale="20 20 20" rotation="-90 0 0" material="side: double; blending: additive; color: #091553; width: 20; transparent: true; metalness: 1; metalnessMap: #bricks; metalnessTextureOffset: 20 20; metalnessTextureRepeat: 20 20; repeat: 2 2; normalMap: #neopia-texture"></a-entity>
+        
+        <!-- 3d obj -->
+    
+        <a-obj-model src="#neopets-obj" rotation="16 93 -19.84" scale="0.4 0.4 0.04" position="-22.55 16.26 36.43"></a-obj-model>  
+        <a-entity gltf-model="#cubo" scale="0.2 0.2 0.2" position="14.65416 3.71686 9.59136"></a-entity>        
+        <a-entity gltf-model="#amapola" scale="0.4 0.4 0.4" position="14 1.6 -11.46" rotation="0 90 0"></a-entity>     
+        <a-entity gltf-model="#arcoiris" scale="2.08623 2.15841 2.08623" position="17.078 4.19 2.88722" rotation="22.109 -95 29.247999999999998"></a-entity>        
+        <a-entity gltf-model="#goldbag" scale="0.13 0.13 0.13" position="-0.87807 0 -0.19299"></a-entity>
+        <a-entity gltf-model="#tumba" scale="0.5 0.5 0.5" position="3.56162 0 -17.83944"></a-entity>
+        <a-entity gltf-model="#tumba" scale="0.3 0.3 0.3" position="-4.66629 0 -17.03135" rotation="0 90 0"></a-entity>
+        <a-entity gltf-model="#tumba" scale="0.2 0.2 0.2" position="2.23759 0 -13.72119" rotation="0 20 0"></a-entity>
+        <a-entity gltf-model="#tumba" scale="0.3 0.3 0.3" position="-7.15209 0 -13.57179" rotation="0 180 0"></a-entity>
+        <a-entity gltf-model="#tumba" scale="0.5 0.5 0.5" position="8.82114 0 -14.42276" rotation="0 40 0"></a-entity>
+        <a-entity gltf-model="#palma" scale="1.3 1.3 1.3" position="2.96672 0 -5.2466" rotation="0 17 0"></a-entity>
+        <a-entity gltf-model="#palma" scale="" position="1.73817 0 -1.0635" rotation="0 30 0"></a-entity>       
+         <a-entity gltf-model="#palma" scale="0.5 0.5 0.5" position="2.42776 0 -1.18277" rotation="0 62 0"></a-entity>
+
+        <a-entity gltf-model="#arbol" scale="1 1.3 1" position="-1.89106 0 -0.43044"></a-entity>
+        <a-entity gltf-model="#huevito" scale="0.1 0.1 0.1" position="0 0 -3.5"></a-entity> 
+        <a-entity gltf-model="#palma" scale="0.8 0.8 0.8" position="-3.15452 0 -5.26089"></a-entity>
+        <a-entity gltf-model="#palma" scale="0.8 0.8 0.8" position="-0.99115 0.00757 -1.60249"></a-entity>
+        <a-entity gltf-model="#palma" scale="" position="0 0 -0.77243" rotation="0 29.999999999999996 0"></a-entity>
+        <a-entity gltf-model="#palma" scale="" position="0.90443 0 -6.24335" rotation="0 90 0"></a-entity>
+
+        <a-entity gltf-model="#duelodromo" scale="0.13 0.13 0.13" position="-9.4 0.3 14.135" rotation="0 150 0"></a-entity>
+        <a-entity gltf-model="#fuente" scale="1.5 1.5 1.5" position="15.97382 0 2.82244" rotation=""></a-entity>        
+        <a-entity gltf-model="#mija" scale="1 1 1" position="7.2 -2.72 12.66" rotation="0 130 0"></a-entity>
+        <a-entity gltf-model="#hierba" scale="1.5 1.5 1.5" position="13.83673 1 -13.28428" rotation=""></a-entity>       
+         <a-entity gltf-model="#neon" scale="" position="16 3.8827 3.07404" rotation="0 -90 0"></a-entity>        
+         <a-entity gltf-model="#velas" scale="0.5 0.5 0.5" position="0 1 -16" rotation="0 0 0"></a-entity>
+        <a-entity gltf-model="#vela-1" scale="0.3 0.3 0.3" position="-5 0 -15" rotation="0 0 0"></a-entity>
+        <a-entity gltf-model="#vela-2" scale="0.3 0.3 0.3" position="-2 0 -14" rotation="0 0 0"></a-entity>
+        <a-entity gltf-model="#vela-3" scale="0.3 0.3 0.3" position="0 0 -13" rotation="0 0 0"></a-entity>
+        <a-entity gltf-model="#vela-4" scale="0.3 0.3 0.3 position="2 0 -16" rotation="0 0 0"></a-entity>
+        <a-entity gltf-model="#vela-5" scale="0.3 0.3 0.3" position="-5 0 -15" rotation="0 0 0"></a-entity>
+        <a-entity gltf-model="#vela-6" scale="0.3 0.3 0.3" position="-7 0 -8" rotation="0 180 0"></a-entity>
+
+        <!-- neopia world -->
+        <a-sphere radius="1" color="white" position="0 3 -13.57992" src="#neopia-world" material="normalTextureOffset: 1 0; width: 510.63" geometry="segmentsHeight: 25; segmentsWidth: 50" rotation="0 260 0" scale="2 2 2"
+        animation__rotation="property: scale; from: 1 1 1; to: 2 2 2; dur: 10000; startEvents: click; loop:true; dir: alternate;">
+        </a-sphere>
+
+        <!-- instalacion de estrellas -->
+        <a-torus-knot radius="1.61" radiustubular="0" segmentsradial="5" segmentstubular="5" q="5" scale="0.1 0.1 0.1" color="#C6BC29" position="6.3525 0.90142 -12.95861" rotation="0 0 14.999999999999998" material="" geometry="radius: 1.6; segmentsRadial: 5; segmentsTubular: 5"></a-torus-knot>
+
+        <a-torus-knot radius="1.61" radiustubular="0" segmentsradial="5" segmentstubular="5" q="5" scale="0.2 0.2 0.2" color="#C6BC29" position="5.68565 1.6929 -16.5639" rotation="0 0 14.999999999999998" material="" geometry="radius: 1.6; segmentsRadial: 5; segmentsTubular: 5"></a-torus-knot>
+        <a-torus-knot radius="1.61" radiustubular="0" segmentsradial="5" segmentstubular="5" q="5" scale="0.2 0.2 0.2" color="#C6BC29" position="0.33515 1.68246 -19.09829" rotation="0 0 14.999999999999998" material="" geometry="radius: 1.6; segmentsRadial: 5; segmentsTubular: 5"></a-torus-knot>
+        <a-torus-knot radius="1.61" radiustubular="0" segmentsradial="5" segmentstubular="5" q="5" scale="0.2 0.2 0.2" color="#C6BC29" position="4.31403 1.1948 -22.32682" rotation="0 0 14.999999999999998" material="" geometry="radius: 1.6; segmentsRadial: 5; segmentsTubular: 5"></a-torus-knot>
+        <a-torus-knot radius="1.61" radiustubular="0" segmentsradial="5" segmentstubular="5" q="5" scale="0.2 0.2 0.2" color="#C6BC29" position="-3.29228 1.59422 -18.63549" rotation="0 0 14.999999999999998" material="" geometry="radius: 1.6; segmentsRadial: 5; segmentsTubular: 5"></a-torus-knot>
+        <a-torus-knot radius="1.61" radiustubular="0" segmentsradial="5" segmentstubular="5" q="5" scale="0.2 0.2 0.2" color="#C6BC29" position="-5.7497 3 -17.19392" rotation="0 0 14.999999999999998" material="" geometry="radius: 1.6; segmentsRadial: 5; segmentsTubular: 5"></a-torus-knot>
+        <a-torus-knot radius="1.61" radiustubular="0" segmentsradial="5" segmentstubular="5" q="5" scale="0.4 0.4 0.4" color="#C6BC29" position="-6.5978 3.35204 -14.81934" rotation="0 20 0" material="" geometry="radius: 1.6; segmentsRadial: 5; segmentsTubular: 5"></a-torus-knot>
+        <a-torus-knot radius="1.61" radiustubular="0" segmentsradial="5" segmentstubular="5" q="5" scale="0.2 0.2 0.2" color="#C6BC29" position="-10.00684 4.1622 -12.72168" rotation="0 0 14.999999999999998" material="" geometry="radius: 1.6; segmentsRadial: 5; segmentsTubular: 5"></a-torus-knot>
+        <a-torus-knot radius="1.61" radiustubular="0" segmentsradial="5" segmentstubular="5" q="5" scale="0.7 0.7 0.7" color="#C6BC29" position="-15.19239 8.3 -9.7" rotation="45 45 0" material="" geometry="radius: 1.6; segmentsRadial: 5; segmentsTubular: 5"></a-torus-knot>
+        <a-torus-knot radius="1.61" radiustubular="0" segmentsradial="5" segmentstubular="5" q="5" scale="0.7 0.7 0.7" color="#C6BC29" position="-8.33827 8.6 4.77444" rotation="-46.28926026861921 35.85684473487718 17.604128255394546" material="" geometry="radius: 1.6; segmentsRadial: 5; segmentsTubular: 5"></a-torus-knot>
+        <a-torus-knot radius="1.61" radiustubular="0" segmentsradial="5" segmentstubular="5" q="5" scale="1 1 0.7" color="#C6BC29" position="-6.45511 10 -0.06898" rotation="67.6789206764431 -100.50481867507823 -179.9998479605043" material="" geometry="radius: 1.6; segmentsRadial: 5; segmentsTubular: 5"></a-torus-knot>
+        <a-torus-knot radius="1.61" radiustubular="0" segmentsradial="5" segmentstubular="5" q="5" scale="1.2 1.2 1" color="#C6BC29" position="-13.08197 10 3.05178" rotation="49.99973494988642 179.33578987594765 -130.0001130106179" material="" geometry="radius: 1.6; segmentsRadial: 5; segmentsTubular: 5"></a-torus-knot>
+        <a-torus-knot radius="1.61" radiustubular="0" segmentsradial="5" segmentstubular="5" q="5" scale="0.7 0.7 0.7" color="#C6BC29" position="-16.24308 9.02882 -1.27834" rotation="119.99999999999999 -90 40" material="" geometry="radius: 1.6; segmentsRadial: 5; segmentsTubular: 5"></a-torus-knot>
+        
+        <!-- texto 
+        <a-text value="Neopia is not dead" font="/typo/please.fnt" position="0 1.3 -7.5" color="white" width="18" text="align: center"></a-text>
+-->
+        <a-text value="Many thousands of years ago Neopia was a barren planet devoid of life. It was discovered by Dr. Frank Sloth and he claimed it as his personal laboratory on which to breed genetically altered mutants. At some point, by unknown means, magic arrived in Neopia and this caused the spontaneous mutation of many of Sloth's creations. They became the earliest forms of Neopet." font="assets/typo/please.fnt" position="-16.11437 1.6 -11.31977" width="8" text="anchor: center; width: 3.5; letterSpacing: 0.05; side: double; wrapCount: 50" wrapcount="30" rotation="0 55 0"></a-text>
+        
+        <a-entity position="-1 2.5 0" text="width: 2.01; color: white; value: 
+         web en construcción grax x la espera 
+         wrapCount: 30" rotation="" scale="">
+        </a-entity>
+    
+        <!-- asteroides promocionales -->
+        <a-video src="#promo-1" width="4" height="2" position="0 15 -15" rotation="0 0 0"></a-video>
+        <a-video src="#promo-2" width="4" height="2" position="0 15 15" rotation="0 180 0"></a-video>
+        <a-video src="#promo-3" width="4" height="2" position="15 15 0" rotation="0 -90 0"></a-video>
+        <a-video src="#promo-4" width="4" height="2" position="-15 15 0" rotation="0 90 0"></a-video>
+        <a-video src="#promo-5" width="4" height="2" position="11 15 -11" rotation="0 -45 0"></a-video>
+        <a-video src="#promo-6" width="4" height="2" position="-11 15 -11" rotation="0 45 0"></a-video>
+        <a-video src="#promo-7" width="4" height="2" position="-11 15 11" rotation="0 135 0"></a-video>
+        <a-video src="#promo-8" width="4" height="2" position="11 15 11" rotation="0 -135 0"></a-video>
+        <a-video src="#promo-9" width="4" height="2" position="6 15 -14" rotation="0 -22.5 0"></a-video>
+        <a-video src="#promo-10" width="4" height="2" position="-6 15 -14" rotation="0 22.5 0"></a-video>
+        <a-video src="#promo-11" width="4" height="2" position="-6 15 14" rotation="0 -202.5"></a-video>
+        <a-video src="#promo-12" width="4" height="2" position="6 15 14" rotation="0 202.5 0"></a-video>
+        <a-video src="#promo-13" width="4" height="2" position="14 15 -6" rotation="0 -67.5 0"></a-video>
+        <a-video src="#promo-14" width="4" height="2" position="-14 15 -6" rotation="0 67.5 0"></a-video>
+        <a-video src="#promo-15" width="4" height="2" position="14 15 6" rotation="0 -112.5 0"></a-video>
+        <a-video src="#promo-16" width="4" height="2" position="-14 15 6" rotation="0 112.5 0"></a-video>
+
+        <!-- imagenes hadas -->
+        <a-image src="#hada-1" position="10 1.6 -4" scale="0.6 0.6 0.6"></a-image>
+        <a-image src="#hada-2" position="11 1.3 -5" scale="0.6 0.6 0.6"></a-image>
+        <a-image src="#hada-3" position="12 1.2 -6" scale="0.6 0.6 0.6"></a-image>
+        <a-image src="#hada-4" position="13 1.8 -7" scale="0.6 0.6 0.6"></a-image>
+        <a-image src="#hada-5" position="14 1.10 -8" scale="0.6 0.6 0.6"></a-image>
+        <a-image src="#hada-11" position="12 1.6 -7" scale="0.6 0.6 0.6"></a-image>
+        <a-image src="#hada-12" position="13 1.3 -8" scale="0.6 0.6 0.6"></a-image>
+        <a-image src="#hada-13" position="14 1.2 -9" scale="0.6 0.6 0.6"></a-image>
+        <a-image src="#hada-14" position="15 1.7 -10" scale="0.6 0.6 0.6"></a-image>
+        <a-image src="#hada-15" position="16 1.5 -4" scale="0.6 0.6 0.6"></a-image>
+        <a-image src="#hada-16" position="17 1.8 -5" scale="0.6 0.6 0.6"></a-image>
+        <a-image src="#hada-17" position="18 1.9 -6" scale="0.6 0.6 0.6"></a-image>
+        <a-image src="#hada-18" position="19 1.10 -7" scale="0.6 0.6 0.6"></a-image>
+        <a-image src="#hada-19" position="20 1.2 -8" scale="0.6 0.6 0.6"></a-image>
+
+        <!-- imagenes neocam -->
+
+        <a-image src="#layout-3" position="-16.73639 7.63408 0.7" rotation="20 90 0" material="" geometry="" scale="2.5 2 2"></a-image>
+        
+        <a-image src="#neocam-1" position="-17 3 0" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-2" position="-17 3 -1.5" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-3" position="-17 1.5 -4.5" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-4" position="-17 1.5 -3" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-5" position="-17 1.5 -1.5" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-6" position="-17 1.5 0" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-7" position="-17 1.5 1.5" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-8" position="-17 1.5 3" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-9" position="-17 1.5 4.5" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-10" position="-17 1.5 6" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-11" position="-17 3 -3" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-12" position="-17 3 -4.5" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-13" position="-17 3 1.5" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-14" position="-17 3 3" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-15" position="-17 3 4.5" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-16" position="-17 3 6" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-17" position="-17 4.5 6" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-18" position="-17 4.5 4.5" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-19" position="-17 4.5 3" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-20" position="-17 4.5 1.5" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-21" position="-17 4.5 0" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-22" position="-17 4.5 -1.5" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-23" position="-17 4.5 -3" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-24" position="-17 4.5 -4.5" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-25" position="-17 6 -4.5" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-26" position="-17 6 -3" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-27" position="-17 6 -1.5" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-28" position="-17 6 0" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-29" position="-17 6 1.5" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-30" position="-17 6 3" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-31" position="-17 6 4.5" rotation="0 90 0"></a-image>
+        <a-image src="#neocam-32" position="-17 6 6" rotation="0 90 0"></a-image>
+
+        <!-- lol images -->
+
+    <a-image id="#neocola"></a-image>
+       <a-image id="#we-are-back"></a-image>
+       <a-image id="#uni-pals"></a-image>
+       <a-image id="#theme-park"></a-image>
+       <a-image id="#dead-chia"></a-image>
+
+        <!-- random el static body no me funciono -->
+        <a-image src="assets/images/lol/cola_machine.png" position="-5.86853 1.50606 4.13489" rotation="0 150 0" material="" geometry="" scale="3 3 3"></a-image>
+
+        
+        <!-- luces -->
+        <a-entity mixin="light" position="-6.66035 -1.72564 41.47456"></a-entity>
+        
+        <!-- audios 
+        <a-entity sound="src:#tunnel; autoplay:true; loop:true; position:0 1 -3.5";></a-entity> -->
+        <a-entity sound="src:#tunnel; autoplay: true; loop: true; maxDistance: 1000; poolSize: 0.2"; position="0 0 -3.5"></a-entity>
+        <a-entity sound="src: #kreludan; autoplay: true; loop: true; maxDistance: 1000; poolSize: 0.2"; position="-8 0 15"></a-entity>
+
+
+    <!-- imagen animada
+        <a-image color="black" position="0 2 8" scale="8 8 8"
+        animation="property:scale; to:2 2 2; dur:5000; loop:true; dir: alternate;">
+        </a-image>
+        
+        <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 5000; velocity: 0.5">
+        <a-box src="#neopia-world" position ="0 2 2" ></a-box>
+        </a-entity>
+   -->
+   
+    
+</body>
+</html>

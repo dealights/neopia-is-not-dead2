@@ -1,0 +1,15 @@
+body {
+    font: 400 1.1rem/1.6 Fira Sans,Helvetica,Arial,sans-serif;
+    color: #333}
+    
+.example__controls{position:absolute;text-transform:uppercase;top:5px;right:5px;z-index:2;font-size:12px;line-height:1.5}
+.example__controls a{background:rgba(0,0,0,.35);color:#fff;display:inline-block;padding:5px 10px}
+.example__controls a:active,.example__controls a:hover{background-color:#ef2d5e}
+.aframe-animation .example__controls{display:none}[data-is-mobile=true] 
+.example__controls{display:none}
+
+.btn{border:0}
+.btn{cursor:pointer;font:inherit}
+a.btn{font-size:.9em;color:#fff;margin:.2em 0;max-width:180px;text-align:center;padding:12px 24px;display:inline-block;vertical-align:middle}
+
+
